@@ -12,7 +12,7 @@ function borrarContacto(nombreContacto){
     listaContactos.splice(indiceContacto, 1);
 }
 // 4. Crea una función para imprimir en consola los contactos presentes en la lista
-// Usando el método sort() los ordeno alfabéticamente:
+// Usando el método sort() los ordeno alfabéticamente: 
 
 function mostrarContactos(){
     for (const contacto of listaContactos.sort()) {
