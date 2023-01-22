@@ -52,6 +52,23 @@ function borrarContactoPorNombres(nombres){
     }
 }
 
+function actualizarContactoPorId(id, nuevosNombres, nuevosApellidos, nuevoTelefono, nuevaCiudad, nuevaDireccion){
+    for (let i = 0; i < listaContactos.length; i++) {
+        if (listaContactos[i].id === id) {
+            listaContactos[i] = {
+                id,
+                nombres: nuevosNombres,
+                apellidos: nuevosApellidos,
+                telefono: nuevoTelefono,
+                ubicaciones: {
+                    ciudad: nuevaCiudad,
+                    direccion: nuevaDireccion
+                }
+            }
+        }
+    }
+}
+
 function mostrarContactos(){
     for (const contacto of listaContactos) {
         console.log(contacto);
@@ -64,4 +81,5 @@ function mostrarContactos(){
 // borrarContactoPorId(1234)
 // borrarContactoPorNombres('Homero José')
 // borrarContactoPorId(1071)
+// actualizarContactoPorId(1051, 'Otoniel Jose', 'Villamizar', '6890039', 'El Guamo', 'Centro')
 // console.log(mostrarContactos())
